@@ -1,5 +1,5 @@
 import "./Home.css"
-import Products from '../Products/Product'
+import Products from '../../components/Products/Products'
 const Home = () => {
     return (
         <div className="homescreen">
@@ -11,7 +11,6 @@ const Home = () => {
               <Products />
               <Products />
               <Products />
-
           </div>
         </div>
     )
