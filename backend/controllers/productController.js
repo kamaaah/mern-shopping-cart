@@ -17,11 +17,11 @@ export const getAllProducts = async (req, res) => {
 }
 export const getProductById = async (req, res) => {
     try {
-        const products = await Product.findById(req.params.id);
-if(!mongoose.Types.ObjectId.isValid(id))
-    return res.status(400).send("No record with given id : " + id);
+        const product = await Product.findById(req.params.id);
+// if(!mongoose.Types.ObjectId.isValid(id))
+//     return res.status(400).send("No record with given id : " + id);
     
-    res.json(products);
+    res.json(product);
     } catch (error) {
         console.error(error);
         res.status(500).json({message: "Server error"})

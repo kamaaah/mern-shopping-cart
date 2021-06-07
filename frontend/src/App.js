@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 /* Pages */
 import Home from "./pages/Home/Home";
-import Product from "./pages/Product/Product";
+import ProductScreen from "./pages/ProductScreen/ProductScreen";
 import Cart from "./pages/Cart/Cart";
 
 /*  Components */
@@ -23,7 +23,7 @@ const App = () => {
       <main>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/product/:id" component={Product} />
+          <Route path="/product/:id" component={ProductScreen} />
           <Route path="/cart" component={Cart} />
         </Switch>
       </main>
