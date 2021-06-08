@@ -18,7 +18,7 @@ const ProductScreen = ({ match, history }) => {
       dispatch(getProductDetails(match.params.id));
     }
   }, [dispatch, product, match]);
-  console.log(product);
+ 
 
   const addToCartHandler = () => {
     dispatch(addToCart(product._id, qty));
@@ -39,7 +39,7 @@ const ProductScreen = ({ match, history }) => {
             </div>
             <div className="left__info">
               <p className="left__name">{product.name}</p>
-              <p>{product.price}</p>
+              <p>$ {product.price}</p>
               <p>{product.description}</p>
             </div>
           </div>
@@ -47,7 +47,7 @@ const ProductScreen = ({ match, history }) => {
           <div className="productpage__right">
             <div className="right__info">
               <p>
-                Price: <span>{product.price}</span>
+                Price: <span>$ {product.price}</span>
               </p>
               <p>
                 Status:{" "}
