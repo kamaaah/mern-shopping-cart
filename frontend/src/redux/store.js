@@ -9,7 +9,6 @@ import {
   getProductsReducer,
 } from "./reducers/productReducers";
 
-
 const reducer = combineReducers({
   cart: cartReducer,
   getProducts: getProductsReducer,
@@ -20,8 +19,20 @@ const reducer = combineReducers({
 witch we can do otherwise with redux */
 const middleware = [thunk];
 
+// const cartItemsInLocalStorage = localStorage.getItem("cart")
+//   ? JSON.parse(localStorage.getItem("cart"))
+//   : [];
+
+// /* function regarding keeping localStorage whenever user leave his session */
+// const INITIAL_STATE = {
+//   cart: {
+//     CartItems: cartItemsInLocalStorage,
+//   },
+// };
+
 const store = createStore(
   reducer,
+  // INITIAL_STATE,
   /* instead of spread the middleware in applyMiddleware(...middleware),
   we can just pass thunk; */
   composeWithDevTools(applyMiddleware(...middleware))
